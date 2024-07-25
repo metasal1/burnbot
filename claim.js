@@ -16,7 +16,7 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 console.log('bot started');
 bot.command('claim', async (ctx) => {
-    const loadingSymbols = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
+    const loadingSymbols = ['1', '2', '69', '420', '1001', '1069', '4200', '6900'];
     let loadingIndex = 0;
     let loadingMessage;
     let isLoading = true;
@@ -54,7 +54,7 @@ bot.command('claim', async (ctx) => {
         // Start the loader
         updateLoader();
 
-        const amount = 1000000n; // Adjust based on your token's decimals
+        const amount = 69000000n; // Adjust based on your token's decimals
 
         const fromTokenAccount = await getOrCreateAssociatedTokenAccount(
             connection,
@@ -100,7 +100,7 @@ bot.command('claim', async (ctx) => {
             ctx.chat.id,
             loadingMessage.message_id,
             null,
-            `Tokens claimed successfully! Transaction signature: ${signature}`
+            `Tokens claimed successfully! Transaction signature: https://solana.fm/tx/${signature}`
         );
     } catch (error) {
         console.error('Error claiming tokens:', error);
